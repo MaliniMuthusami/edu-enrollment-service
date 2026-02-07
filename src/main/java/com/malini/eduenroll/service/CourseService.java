@@ -26,17 +26,12 @@ public class CourseService {
                 .orElseThrow(() -> new CourseNotFoundException(id));
     }
 
-    public Course getCourseByCode(String code){
-        return courseRepo.findByCodeIgnoreCase(code)
-                .orElseThrow(() -> new CourseNotFoundException(code) );
-    }
-
     public PaginatedResponse<Course> searchCourses(String search, Boolean active, String sortBy,
                                                    String sortDir, Integer page, Integer size){
         int safePage = (page == null || page < 0) ? 0 : page;
         int safeSize = (size == null || size < 0) ? 3 : size;
 
-        String effectiveSortBy = (sortBy == null || sortBy.isBlank()) ? search : sortBy;
+        String effectiveSortBy = (sortBy == null || sortBy.isBlank()) ? "title" : sortBy;
         String effectiveSortDir = (sortDir == null || sortDir.isBlank()) ? "asc" : sortDir;
 
         if(!effectiveSortBy.equalsIgnoreCase("title")

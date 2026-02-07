@@ -2,7 +2,6 @@ package com.malini.eduenroll.error;
 
 import java.util.Map;
 
-import com.guvi.spring_boot_intro.exception.*;
 import com.malini.eduenroll.exception.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

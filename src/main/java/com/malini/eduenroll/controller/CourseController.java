@@ -22,11 +22,6 @@ public class CourseController {
         return courseService.getCourseById(id);
     }
 
-    @GetMapping("/{code}")
-    public Course getCourseByCode(@PathVariable String code){
-        return courseService.getCourseByCode(code);
-    }
-
     @GetMapping
     public PaginatedResponse<Course> listCourses
             (@RequestParam(required = false) String q,
@@ -64,7 +59,7 @@ public class CourseController {
         return courseService.updateCourse(id, request.getTitle(), request.getCode());
     }
 
-    @DeleteMapping()
+    @DeleteMapping("/{id}")
     public void deleteCourse(@PathVariable String id){
         courseService.deleteCourseById(id);
     }
