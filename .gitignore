@@ -1,0 +1,66 @@
+############################
+# Maven / Build
+############################
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+############################
+# IntelliJ IDEA
+############################
+.idea/
+*.iml
+out/
+
+############################
+# Logs
+############################
+*.log
+logs/
+
+############################
+# OS Files
+############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+############################
+# Environment / Secrets
+############################
+.env
+.env.*
+application-local.yml
+application-local.properties
+application-secret.properties
+
+############################
+# Java
+############################
+*.class
+*.jar
+*.war
+*.ear
+
+############################
+# Spring Boot DevTools
+############################
+.springBeans
+.recommenders
+
+############################
+# Temporary Files
+############################
+*.tmp
+*.swp
+*.swo
+*~
+
+############################
+# Node (if frontend later)
+############################
+node_modules/
+
+############################
+# VSCode (if used)
+############################
+.vscode/
